@@ -1,46 +1,98 @@
 @import url("https://use.typekit.net/ngo2laz.css");
 
-html{
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
     font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: futura-pt-bold, sans-serif;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.navigation {
+    width: 100%;
+    float: left;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.header {
+    text-align: center;
+    background: white;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    margin: 0px;
+    padding-top: 0px;
+}
+
+.header a {
+    display: inline-block;
+    padding: 20px 10px 10px 10px;
+}
+
+.header a:hover, a:active {
+    background-color: black;
+    color: white;
 }
 
 h1 {
-    font-family: futura-pt-bold, Arial, Helvetica, sans-serif;
     font-size: 2.441rem;
 }
 
-#linktree {
-    border-radius: 50px;
-    text-align: center;
-    position: relative;
-    background-color: tomato;
-    color: #020202;
-    max-width: 50%;
-    margin: auto;
-    padding: 20px;
-    box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.4);
+a:hover, a:active {
+    color: darkorange;
 }
 
-.header {
-    border-radius: 30px;
-    background: white;
-    text-align: center;
-    color: #040404;
+.linktree {
+    background-color: darkorange;
+    border-radius: 15px;
     padding: 20px;
+    margin-top: 30px;
+    text-align: center;
     display: inline-block;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
-ul {
-    list-style: none;
-    padding-left: 0px;
+.linktree ul {
+    list-style-type: none;
 }
 
-li {
-    font-family: futura-pt-bold, Arial, Helvetica, sans-serif;
+.linktree li {
+    padding: 10px;
+    margin: 15px;
+}
+
+.linktree a {
+    font-size: 1.563rem;
     background-color: white;
-    padding: auto;
-    margin-bottom: 15px;
-    text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+}
+
+.linktree a:hover, a:active {
+    font-size: 1.563rem;
+    background-color: black;
+    color: white;
 }
