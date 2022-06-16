@@ -20,6 +20,9 @@
     float: left;
 }
 
+body {
+    background-color: #A4D4B4;
+}
 [class*="col-"] {
     float: left;
     padding: 15px;
@@ -66,7 +69,7 @@ a:hover, a:active {
 }
 
 .linktree {
-    background-color: darkorange;
+    background-color: white;
     border-radius: 15px;
     padding: 20px;
     margin-top: 30px;
