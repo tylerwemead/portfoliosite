@@ -82,7 +82,6 @@ h1 {
 }
 
 .linktree > * {
-    padding: 10px;
     flex: 1 100%;
 }
 
@@ -91,7 +90,6 @@ h1 {
     height:150px;
     padding: 0px;
     border-radius: 50%;
-    margin-bottom: 10px;
     border: 2px solid #0D0A0B;
     margin: auto;
     background-color: #F3EFF5;
@@ -115,6 +113,9 @@ h1 {
     object-fit: cover;
 }
 
+.info {
+    margin-bottom: 20px; 
+}
 .info h1 {
     margin-bottom: 10px;
 }
@@ -151,6 +152,7 @@ h1 {
     
     .info {
         margin-top: 20px;
+        margin-left: 10px;
         padding-right: 0px;
         flex: 3 0px;
     }
