@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+    background-color: #4d84b1;
 	line-height: 1;
 }
 ol, ul {
@@ -60,9 +61,6 @@ table {
 /// Defined CSS Below ///
 
 */
-body {
-    background-color: #36558F;
-}
 
 h1 {
     font-size: 2.551rem;
@@ -98,8 +96,7 @@ h1 {
     margin: auto;
     background-color: #F3EFF5;
     overflow: hidden;
-    transition: transform .2s, box-shadow 0.2s;
-    box-shadow: 0px 5px #0D0A0B;
+    transition: transform .2s;
 }
 
 .profilepic  a {
@@ -110,7 +107,6 @@ h1 {
 .profilepic:hover {
     opacity: 0.5;
     transform: scale(1.05);
-    box-shadow: 0px 0px #0D0A0B;
 }
 
 .profilepic a img {
@@ -130,6 +126,7 @@ h1 {
     padding: 10px;
     text-align: center;
     text-decoration: none;
+    transition: transform .2s;
 }
 
 .link:visited {
@@ -139,6 +136,7 @@ h1 {
 .link:hover, .link:active {
     background-color: #0D0A0B;
     color: #F3EFF5;
+    transform: scale(1.05);
 }
 
 @media all and (min-width: 650px) {
