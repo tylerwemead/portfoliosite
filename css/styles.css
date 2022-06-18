@@ -120,7 +120,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-.link {
+.sociallink{
     color: inherit;
     border: 2px solid #0D0A0B;
     border-radius: 20px;
@@ -130,11 +130,11 @@ h1 {
     transition: transform .2s;
 }
 
-.link:visited {
+.sociallink:visited {
     color: #0D0A0B;
 }
 
-.link:hover, .link:active {
+.sociallink:hover, .sociallink:active {
     background-color: #0D0A0B;
     color: #F3EFF5;
     transform: scale(1.05);
@@ -157,7 +157,7 @@ h1 {
         flex: 3 0px;
     }
 
-    .link {
+    .sociallink{
         font-size: 1.5rem;
         padding: 10px;
     }
