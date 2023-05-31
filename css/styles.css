@@ -62,7 +62,147 @@ table {
 
 */
 
-header {
-    background-color: red;
+/* Typescaling */
 
+
+body {
+	position: relative;
+	width: 920px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow-y: scroll;
+}
+
+header {
+	background-color: #efefef;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	padding-bottom: 10px;
+}
+
+.header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	padding-top: 20px;
+}
+
+hr.solid {
+	border-top: 3px solid #141516;
+}
+
+main {
+	margin-bottom: 100px;
+}
+
+.navitem {
+	text-decoration: none;
+	color: #141516
+}
+
+.navitem:hover {
+	color: yellowgreen;
+}
+
+nav ul {
+}
+
+nav ul li {
+	display: inline-block;
+	padding-left: 10px;
+}
+
+.image-gallery {
+	display: grid;
+	justify-content: start;
+	grid-template-columns: auto auto auto;
+	gap: 10px;
+}
+
+.grid-img-nav {
+	position: relative;
+	width: 300px;
+	height: 300px;
+}
+
+.image-gallery li img {
+	object-fit: cover;
+	display: block;
+	max-width: 300px;
+	height: auto;
+}
+
+.overlay {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: yellowgreen;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: all 0.1s 0.1s ease-in-out;
+	color: #fff;
+}
+
+.grid-img-nav:hover .overlay {
+	opacity: 1;
+}
+
+.project-img {
+	max-width: 100%;
+	height: auto;
+}
+
+.about {
+	display: flex;
+	flex-direction: row;
+}
+
+.about section {
+	width: 50%;
+	height: 100vh;
+}
+
+.portrait {
+	width: auto;
+	height: 200px;
+	object-fit: cover;
+}
+
+/* Laying out the Grid for the About Me Section */
+
+.biogrid {
+	display: grid;
+	grid-template-areas:
+	'portrait portrait education education education'
+	'portrait portrait experience experience experience'
+	'contact contact experience experience experience'
+	'interests interests experience experience experience'
+	'interests interests projects projects projects'
+	'interests interests projects projects projects'
+	'interests interests projects projects projects';
+	gap: 10px;
+	height: 875px;
+
+}
+
+.item1 { 
+	grid-area: portrait;
+}
+
+.item2 {
+	grid-area: education;
+}
+
+.item3 { grid-area: contact; }
+.item4 { grid-area: experience; }
+.item5 { grid-area: interests; }
+.item6 { grid-area: projects;}
+
+.biogrid > div {
+	border: 1px solid #141414;
 }
