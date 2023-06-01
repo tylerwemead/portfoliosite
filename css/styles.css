@@ -1,6 +1,6 @@
 /* v Fonts v */
 
-@import url("https://use.typekit.net/ngo2laz.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* v CSS RESET v */
 
@@ -21,7 +21,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font-family: futura-pt-bold;
+	font-family: 'Roboto', sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-    background-color: #36558F;
+    background-color: #efefef;
 	line-height: 1;
 }
 ol, ul {
@@ -62,116 +62,147 @@ table {
 
 */
 
-h1 {
-    font-size: 2.551rem;
+/* Typescaling */
+
+
+body {
+	position: relative;
+	width: 920px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow-y: scroll;
 }
 
-.linktree {
-    position: relative;
-    background-color: #F3EFF5;
-    width: min-content;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    border: 2px solid #0D0A0B;
-    border-radius: 30px;
-    box-shadow: 0px 10px 0px #0D0A0B;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 10px;
-    z-index: 2;
+header {
+	background-color: #efefef;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	padding-bottom: 10px;
 }
 
-.linktree > * {
-    flex: 1 100%;
+.header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	padding-top: 20px;
 }
 
-.profilepic {
-    max-width: 150px;
-    height:150px;
-    padding: 0px;
-    border-radius: 50%;
-    border: 2px solid #0D0A0B;
-    margin: auto;
-    background-color: #F3EFF5;
-    overflow: hidden;
-    transition: transform .2s;
+hr.solid {
+	border-top: 3px solid #141516;
 }
 
-.profilepic  a {
-    width: inherit;
-    height: inherit;
+main {
+	margin-bottom: 100px;
 }
 
-.profilepic:hover {
-    opacity: 0.5;
-    transform: scale(1.05);
+.navitem {
+	text-decoration: none;
+	color: #141516
 }
 
-.profilepic a img {
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
+.navitem:hover {
+	color: yellowgreen;
 }
 
-.info {
-    margin-bottom: 20px; 
-}
-.info h1 {
-    margin-bottom: 10px;
+nav ul {
 }
 
-.sociallink{
-    color: inherit;
-    border: 2px solid #0D0A0B;
-    border-radius: 20px;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    transition: transform .2s;
+nav ul li {
+	display: inline-block;
+	padding-left: 10px;
 }
 
-.sociallink:visited {
-    color: #0D0A0B;
+.image-gallery {
+	display: grid;
+	justify-content: start;
+	grid-template-columns: auto auto auto;
+	gap: 10px;
 }
 
-.sociallink:hover, .sociallink:active {
-    background-color: #0D0A0B;
-    color: #F3EFF5;
-    transform: scale(1.05);
+.grid-img-nav {
+	position: relative;
+	width: 300px;
+	height: 300px;
 }
 
-@media all and (min-width: 650px) {
-    .linktree {
-        width: 75%;
-        max-width: 600px;
-    }
-
-    .profilepic {
-        flex: 1 auto;
-    }
-    
-    .info {
-        margin-top: 20px;
-        margin-left: 10px;
-        padding-right: 0px;
-        flex: 3 0px;
-    }
-
-    .sociallink{
-        font-size: 1.5rem;
-        padding: 10px;
-    }
+.image-gallery li img {
+	object-fit: cover;
+	display: block;
+	max-width: 300px;
+	height: auto;
 }
 
-#landingBackground { /*Video Background for Landing Page*/
-    position: fixed;
-    max-width: 100%;
-    min-height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    z-index: 1;
+.overlay {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: yellowgreen;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: all 0.1s 0.1s ease-in-out;
+	color: #fff;
+}
+
+.grid-img-nav:hover .overlay {
+	opacity: 1;
+}
+
+.project-img {
+	max-width: 100%;
+	height: auto;
+}
+
+.about {
+	display: flex;
+	flex-direction: row;
+}
+
+.about section {
+	width: 50%;
+	height: 100vh;
+}
+
+.portrait {
+	width: auto;
+	height: 200px;
+	object-fit: cover;
+}
+
+/* Laying out the Grid for the About Me Section */
+
+.biogrid {
+	display: grid;
+	grid-template-areas:
+	'portrait portrait education education education'
+	'portrait portrait experience experience experience'
+	'contact contact experience experience experience'
+	'interests interests experience experience experience'
+	'interests interests projects projects projects'
+	'interests interests projects projects projects'
+	'interests interests projects projects projects';
+	gap: 10px;
+	height: 875px;
+
+}
+
+.item1 { 
+	grid-area: portrait;
+}
+
+.item2 {
+	grid-area: education;
+}
+
+.item3 { grid-area: contact; }
+.item4 { grid-area: experience; }
+.item5 { grid-area: interests; }
+.item6 { grid-area: projects;}
+
+.biogrid > div {
+	border: 1px solid #141414;
 }
