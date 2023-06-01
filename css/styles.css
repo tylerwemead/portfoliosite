@@ -64,6 +64,24 @@ table {
 
 /* Typescaling */
 
+h2 {
+	font-size: 28px;
+	padding-bottom: 5px;
+}
+
+h3 {
+	font-size: 22px;
+	padding-bottom: 5px;
+}
+
+ul {
+	padding-bottom: 5px;
+}
+
+p {
+	font-size: 16px;
+	padding-bottom: 5px;
+}
 
 body {
 	position: relative;
@@ -161,6 +179,7 @@ nav ul li {
 .about {
 	display: flex;
 	flex-direction: row;
+	align-items: start;
 }
 
 .about section {
@@ -172,6 +191,7 @@ nav ul li {
 	width: auto;
 	height: 200px;
 	object-fit: cover;
+	padding-right: 10px;
 }
 
 /* Scrollbar */
