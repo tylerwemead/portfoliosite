@@ -173,36 +173,17 @@ nav ul li {
 	object-fit: cover;
 }
 
-/* Laying out the Grid for the About Me Section */
+/* Scrollbar */
 
-.biogrid {
-	display: grid;
-	grid-template-areas:
-	'portrait portrait education education education'
-	'portrait portrait experience experience experience'
-	'contact contact experience experience experience'
-	'interests interests experience experience experience'
-	'interests interests projects projects projects'
-	'interests interests projects projects projects'
-	'interests interests projects projects projects';
-	gap: 10px;
-	height: 875px;
-
+::-webkit-scrollbar {
+	width: 12px;
 }
 
-.item1 { 
-	grid-area: portrait;
+::-webkit-scrollbar-track {
+	background: #efefef;
 }
 
-.item2 {
-	grid-area: education;
-}
-
-.item3 { grid-area: contact; }
-.item4 { grid-area: experience; }
-.item5 { grid-area: interests; }
-.item6 { grid-area: projects;}
-
-.biogrid > div {
-	border: 1px solid #141414;
+::-webkit-scrollbar-thumb {
+	background: #141516;
+	border-radius: 5px;
 }
