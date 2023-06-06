@@ -85,7 +85,8 @@ p {
 
 body {
 	position: relative;
-	width: 920px;
+	max-width: 920px;
+	width: 75%;
 	margin-left: auto;
 	margin-right: auto;
 	overflow-y: scroll;
@@ -123,9 +124,6 @@ main {
 	color: yellowgreen;
 }
 
-nav ul {
-}
-
 nav ul li {
 	display: inline-block;
 	padding-left: 10px;
@@ -133,6 +131,7 @@ nav ul li {
 
 .image-gallery {
 	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 	justify-content: start;
 	grid-template-columns: auto auto auto;
 	gap: 10px;
@@ -140,18 +139,19 @@ nav ul li {
 
 .grid-img-nav {
 	position: relative;
-	width: 300px;
-	height: 300px;
+	max-width: 100%;
+	height: 100%;
 }
 
 .image-gallery li img {
 	object-fit: cover;
 	display: block;
-	width: 300px;
-	height: 300px;
+	max-width: 100%;
+	height: auto;
 }
 
 .overlay {
+	object-fit: cover;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -207,4 +207,35 @@ nav ul li {
 ::-webkit-scrollbar-thumb {
 	background: #141516;
 	border-radius: 6px;
+}
+
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 600px) {
+
+	body {
+		width: 100%;
+	}
+
+	main {
+		padding: 10px;
+	}
+
+	.header-content {
+		flex-direction: column;
+		align-items: center;
+  	}
+  	nav ul li {
+		text-align: center;
+		display: block;
+		padding-left: 0px;
+	}
+	.image-gallery {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
